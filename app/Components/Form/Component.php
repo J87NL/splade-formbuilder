@@ -6,6 +6,7 @@ abstract class Component
 {
     public string $name = '';
     public string $label = '';
+    public array $attributes = [];
 
     public function __construct($name)
     {
@@ -17,7 +18,7 @@ abstract class Component
         return new static($name);
     }
 
-    public function setLabel(string $label)
+    public function label(string $label)
     {
         $this->label = $label;
 

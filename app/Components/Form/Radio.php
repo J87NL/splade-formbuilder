@@ -2,9 +2,9 @@
 
 namespace App\Components\Form;
 
-use ProtoneMedia\Splade\Components\Form\Checkbox as SpladeCheckbox;
+use ProtoneMedia\Splade\Components\Form\Radio as SpladeRadio;
 
-class Checkbox extends Component
+class Radio extends Component
 {
     public string $value;
 
@@ -17,7 +17,7 @@ class Checkbox extends Component
 
     public function render()
     {
-        $object = new SpladeCheckbox(
+        $object = new SpladeRadio(
             name:  $this->name,
             value: $this->value ?? $this->label,
             label: $this->label

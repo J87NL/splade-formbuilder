@@ -1,4 +1,9 @@
-<x-splade-form method="{{ $method ?? 'POST' }}" action="{{ $action }}" @class($class ?? [])>
+<x-splade-form
+    method="{{ $method ?? 'POST' }}"
+    action="{{ $action }}"
+    :default="$data ?? []"
+    @class($class ?? [])
+>
 
     @foreach($fields as $field)
         {!! $field->render() !!}

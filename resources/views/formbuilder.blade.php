@@ -5,7 +5,7 @@
 
     <x-panel>
 
-        <x-splade-formbuilder :action="$action" :fields="$fields" @class($class ?? []) />
+        <x-splade-formbuilder :action="$action" :fields="$fields" :data="$data" @class($class ?? []) />
 
     </x-panel>
 </x-layout>

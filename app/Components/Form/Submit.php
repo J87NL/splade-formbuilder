@@ -8,7 +8,7 @@ class Submit extends Component
 {
     public function render()
     {
-        $object = new SpladeSubmit(name: $this->name, label: $this->label);
+        $object = new SpladeSubmit(label: $this->label, name: $this->name);
 
         return $object->render()->with($object->data())->with(['slot' => '']);
     }
