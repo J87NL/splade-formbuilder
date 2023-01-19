@@ -1,7 +1,7 @@
 This is a (work in progress) proof of concept for a FilamentPHP-like formbuilder-approach for Splade.dev forms.
 
 Todo:
-- [ ] Selects: https://splade.dev/docs/form-select
+- [x] Selects: https://splade.dev/docs/form-select
 - [ ] Multiple checkboxes-support (from an array): https://splade.dev/docs/form-checkbox
 - [ ] Multiple radios-support (from an array): https://splade.dev/docs/form-radio
 - [ ] Files: https://splade.dev/docs/form-radio

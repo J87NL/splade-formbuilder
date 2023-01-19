@@ -10,6 +10,7 @@ use App\Components\Form\Input;
 use App\Components\Form\Number;
 use App\Components\Form\Password;
 use App\Components\Form\Radio;
+use App\Components\Form\Select;
 use App\Components\Form\Submit;
 use App\Components\Form\Text;
 use App\Components\Form\Textarea;
@@ -118,6 +119,92 @@ class FormbuilderController extends Controller
             Radio::make('testRadio')->label('Radio 1')->value('radio-1'),
             Radio::make('testRadio')->label('Radio 2')->value('radio-2'),
             Radio::make('testRadio')->label('Radio 3')->value('radio-3'),
+
+            Select::make('testSelect')
+                ->label('Choose a country')
+                ->placeholder('Placeholder...')
+                ->options([
+                    'be' => 'Belgium',
+                    'de' => 'Germany',
+                    'fr' => 'France',
+                    'lu' => 'Luxembourg',
+                    'nl' => 'The Netherlands',
+                ]),
+
+            Select::make('testSelectWithoutChoices')
+                ->label('Choose a country - choices(false)')
+                ->placeholder('Placeholder...')
+                ->options([
+                    'be' => 'Belgium',
+                    'de' => 'Germany',
+                    'fr' => 'France',
+                    'lu' => 'Luxembourg',
+                    'nl' => 'The Netherlands',
+                ])
+                ->choices(false),
+
+            Select::make('testSelectMultiple[]')
+                ->label('Choose multiple countries')
+                ->placeholder('Placeholder...')
+                ->options([
+                    'be' => 'Belgium',
+                    'de' => 'Germany',
+                    'fr' => 'France',
+                    'lu' => 'Luxembourg',
+                    'nl' => 'The Netherlands',
+                ])
+                ->multiple(),
+
+            Select::make('testSelectMultipleWithExtraChoicesOptions[]')
+                ->label('Choose multiple countries - with extra Choices.js-options: { searchEnabled: false }')
+                ->placeholder('Placeholder...')
+                ->options([
+                              'be' => 'Belgium',
+                              'de' => 'Germany',
+                              'fr' => 'France',
+                              'lu' => 'Luxembourg',
+                              'nl' => 'The Netherlands',
+                          ])
+                ->multiple()
+                ->choices(['searchEnabled' => false ]),
+
+            Select::make('testSelectMultipleWithoutChoices[]')
+                ->label('Choose multiple countries - choices(false)')
+                ->placeholder('Placeholder...')
+                ->options([
+                    'be' => 'Belgium',
+                    'de' => 'Germany',
+                    'fr' => 'France',
+                    'lu' => 'Luxembourg',
+                    'nl' => 'The Netherlands',
+                ])
+                ->multiple()
+                ->choices(false),
+
+            Select::make('fromRemoteUrl')
+                ->label('Select with data from a remote URL')
+                ->remoteUrl('/api/users1')
+                ->choices(false),
+
+            Select::make('fromRemoteUrlWithRemoteRoot')
+                ->label('Select with data from a remote URL with a remote root')
+                ->remoteUrl('/api/users2')
+                ->remoteRoute('data.users')
+                ->optionLabel('name')
+                ->optionValue('id')
+                ->choices(false),
+
+            Select::make('withOptionLabelAndValue')
+                ->label('Select with Option Label and Value')
+                ->options([
+                    ['id' => 10, 'name' => 'Pascal'],
+                    ['id' => 20, 'name' => 'Johan'],
+                    ['id' => 30, 'name' => 'Olaf'],
+                    ['id' => 40, 'name' => 'Kristof'],
+                ])
+                ->optionLabel('name')
+                ->optionValue('id')
+                ->choices(false),
 
             Submit::make('submit')->label('Verstuur'),
         ];
