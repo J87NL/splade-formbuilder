@@ -16,7 +16,11 @@ class Textarea extends Component
 
     public function render()
     {
-        $object = new SpladeTextarea(name: $this->name, label: $this->label);
+        $object = new SpladeTextarea(
+            name: $this->name,
+            label: $this->label,
+            help: $this->help
+        );
 
         $object->withAttributes($this->attributes);
 

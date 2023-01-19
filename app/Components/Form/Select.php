@@ -76,6 +76,7 @@ class Select extends Component
             placeholder: $this->placeholder ?? '',
             multiple:    $this->multiple,
             choices:     $this->choices,
+            help:        $this->help,
             remoteUrl:   $this->remoteUrl,
             remoteRoot:  $this->remoteRoute,
             optionValue: $this->optionValue,

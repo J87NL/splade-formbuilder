@@ -93,7 +93,8 @@ class Input extends Component
             label: $this->label,
             date: $this->date || $this->type === 'date',
             time: $this->time || $this->type === 'time',
-            range: $this->range
+            range: $this->range,
+            help: $this->help
         );
 
         if ($this->date || $this->time) {

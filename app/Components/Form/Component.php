@@ -7,6 +7,7 @@ abstract class Component
     public string $name = '';
     public string $label = '';
     public array $attributes = [];
+    public string $help = '';
 
     public function __construct($name)
     {
@@ -21,6 +22,13 @@ abstract class Component
     public function label(string $label)
     {
         $this->label = $label;
+
+        return $this;
+    }
+
+    public function help(string $text)
+    {
+        $this->help = $text;
 
         return $this;
     }

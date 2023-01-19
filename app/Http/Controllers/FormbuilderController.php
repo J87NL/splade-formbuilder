@@ -34,7 +34,8 @@ class FormbuilderController extends Controller
                 ->hidden(),
 
             Input::make('inputText1')
-                ->label('Standard input text field'),
+                ->label('Standard input text field')
+                ->help('Test help 1'),
 
             Input::make('inputText2')
                 ->label('Input text field (minlength: 2, maxlength: 255)')
@@ -93,7 +94,8 @@ class FormbuilderController extends Controller
 
             Date::make('inputDate6')
                 ->label('Input type: date with range')
-                ->range(),
+                ->range()
+                ->help('Test help 2'),
 
             Input::make('inputTime1')
                 ->label('Input time field - with extra FlatPicker time-options: { time_24hr: false }')
@@ -111,14 +113,15 @@ class FormbuilderController extends Controller
 
             Textarea::make('testTextarea2')
                 ->label('Textarea (with autosize)')
-                ->autosize(),
+                ->autosize()
+                ->help('Test help 3'),
 
             Checkbox::make('testCheckbox[]')->label('Checkbox 1')->value('checkbox-1'),
-            Checkbox::make('testCheckbox[]')->label('Checkbox 2')->value('checkbox-2'),
+            Checkbox::make('testCheckbox[]')->label('Checkbox 2')->value('checkbox-2')->help('Test help 4'),
 
             Radio::make('testRadio')->label('Radio 1')->value('radio-1'),
             Radio::make('testRadio')->label('Radio 2')->value('radio-2'),
-            Radio::make('testRadio')->label('Radio 3')->value('radio-3'),
+            Radio::make('testRadio')->label('Radio 3')->value('radio-3')->help('Test help 5'),
 
             Select::make('testSelect')
                 ->label('Choose a country')
@@ -204,7 +207,8 @@ class FormbuilderController extends Controller
                 ])
                 ->optionLabel('name')
                 ->optionValue('id')
-                ->choices(false),
+                ->choices(false)
+                ->help('Test help 6'),
 
             Submit::make('submit')->label('Verstuur'),
         ];

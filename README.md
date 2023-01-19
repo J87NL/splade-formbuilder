@@ -8,7 +8,8 @@ Todo:
 - [ ] Groups? https://splade.dev/docs/form-group
 - [ ] Test model-binding: https://splade.dev/docs/form-model-binding-attributes
 - [ ] Validation / show-errors? https://splade.dev/docs/form-overview
-- [ ] Placeholders, prepends, appends, help-texts
+- [ ] Placeholders, prepends, appends
+- [x] Help-texts
 - [ ] Disabled / readonly / required
 - [ ] ->email() / ->numeric() / ->integer() / ->decimals(2) / ->password() / ->url() ?
 - [ ] color picker?
