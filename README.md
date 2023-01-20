@@ -16,3 +16,8 @@ Todo:
 - [ ] Datepicker timezone?
 - [ ] Relations
 - [ ] Create package or pull request
+
+___
+
+## To see this poc in action: https://splade-formbuilder.j87.nl/formbuilder
+Source/config: https://github.com/J87NL/splade-formbuilder/blob/main/app/Http/Controllers/FormbuilderController.php
