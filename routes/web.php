@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['splade'])->group(function () {
     Route::get('/', fn () => view('home'))->name('home');
-    Route::get('/formbuilder', [FormbuilderController::class, 'index'])->name('formbuilder');
+    Route::get('/formbuilder', [FormbuilderController::class, 'basic'])->name('formbuilder.basic');
+    Route::get('/formbuilder-class', [FormbuilderController::class, 'formClass'])->name('formbuilder.form-class');
     Route::post('/formbuilder', [FormbuilderController::class, 'store'])->name('formbuilder.store');
 
     // Registers routes to support Table Bulk Actions and Exports...

@@ -6,8 +6,8 @@ Todo:
 - [ ] Multiple radios-support (from an array): https://splade.dev/docs/form-radio
 - [ ] Files: https://splade.dev/docs/form-radio
 - [ ] Groups? https://splade.dev/docs/form-group
-- [ ] Test model-binding: https://splade.dev/docs/form-model-binding-attributes
-- [ ] Validation / show-errors? https://splade.dev/docs/form-overview
+- [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
+- [ ] Validation (`->rules('required', 'string', 'max:255')`) / show-errors? https://splade.dev/docs/form-overview
 - [ ] Placeholders, prepends, appends
 - [x] Help-texts
 - [ ] Disabled / readonly / required
@@ -15,7 +15,8 @@ Todo:
 - [ ] color picker?
 - [ ] Datepicker timezone?
 - [ ] Relations
-- [ ] Create package or pull request
+- [x] Refactor into SpladeForm-class (like SpladeTable)
+- [ ] Create pull request
 
 ___
 

@@ -17,8 +17,12 @@
                             {{ __('Home') }}
                         </x-nav-link>
 
-                        <x-nav-link href="{{ route('formbuilder') }}" :active="request()->routeIs('formbuilder')">
-                            {{ __('Formbuilder') }}
+                        <x-nav-link href="{{ route('formbuilder.basic') }}" :active="request()->routeIs('formbuilder.basic')">
+                            {{ __('Formbuilder basic') }}
+                        </x-nav-link>
+
+                        <x-nav-link href="{{ route('formbuilder.form-class') }}" :active="request()->routeIs('formbuilder.form-class')">
+                            {{ __('Formbuilder ExampleForm class') }}
                         </x-nav-link>
                     </div>
                 </div>
@@ -42,8 +46,12 @@
                     {{ __('Home') }}
                 </x-responsive-nav-link>
 
-                <x-responsive-nav-link href="{{ route('formbuilder') }}" :active="request()->routeIs('formbuilder')">
-                    {{ __('Formbuilder') }}
+                <x-responsive-nav-link href="{{ route('formbuilder.basic') }}" :active="request()->routeIs('formbuilder.basic')">
+                    {{ __('Formbuilder basic') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link href="{{ route('formbuilder.form-class') }}" :active="request()->routeIs('formbuilder.form-class')">
+                    {{ __('Formbuilder ExampleForm class') }}
                 </x-responsive-nav-link>
             </div>
         </div>
