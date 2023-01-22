@@ -7,7 +7,9 @@ use App\Components\Form\Password;
 use App\Components\Form\Submit;
 use App\Components\Form\Textarea;
 use App\Forms\ExampleForm;
+use App\Forms\MultiForm;
 use App\Forms\SpladeForm;
+use App\Http\Requests\MultiFieldsFormRequest;
 use App\Http\Requests\ExampleFormRequest;
 use Illuminate\Http\Request;
 
@@ -62,6 +64,22 @@ class FormbuilderController extends Controller
     }
 
     public function storeWithFormRequest(ExampleFormRequest $request)
+    {
+        $validated = $request->validated();
+
+        dd($validated);
+    }
+
+    public function multi()
+    {
+//        dd(ExampleForm2::rules());
+
+        return view('formbuilder', [
+            'example' => MultiForm::build(),
+        ]);
+    }
+
+    public function storeMulti(MultiFieldsFormRequest $request)
     {
         $validated = $request->validated();
 

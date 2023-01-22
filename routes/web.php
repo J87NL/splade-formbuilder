@@ -23,6 +23,9 @@ Route::middleware(['splade'])->group(function () {
     Route::get('/formbuilder-class', [FormbuilderController::class, 'formClass'])->name('formbuilder.form-class');
     Route::post('/formbuilder-class', [FormbuilderController::class, 'storeWithFormRequest'])->name('formbuilder.store-form-class');
 
+    Route::get('/formbuilder-multi', [FormbuilderController::class, 'multi'])->name('formbuilder.multi');
+    Route::post('/formbuilder-multi', [FormbuilderController::class, 'storeMulti'])->name('formbuilder.store-multi');
+
     // Registers routes to support Table Bulk Actions and Exports...
     Route::spladeTable();
 

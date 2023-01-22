@@ -2,8 +2,8 @@ This is a (work in progress) proof of concept for a FilamentPHP-like formbuilder
 
 Todo:
 - [x] Selects: https://splade.dev/docs/form-select
-- [ ] Multiple checkboxes-support (from an array): https://splade.dev/docs/form-checkbox
-- [ ] Multiple radios-support (from an array): https://splade.dev/docs/form-radio
+- [x] Multiple checkboxes-support (from an array): https://splade.dev/docs/form-checkbox
+- [x] Multiple radios-support (from an array): https://splade.dev/docs/form-radio
 - [ ] Files: https://splade.dev/docs/form-radio
 - [ ] Groups? https://splade.dev/docs/form-group
 - [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes

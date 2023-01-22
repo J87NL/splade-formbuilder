@@ -21,30 +21,35 @@ class Select extends Component
 
         return $this;
     }
+
     public function placeholder(string $placeholder = '')
     {
         $this->placeholder = $placeholder;
 
         return $this;
     }
+
     public function multiple(bool $multiple = true)
     {
         $this->multiple = $multiple;
 
         return $this;
     }
+
     public function choices(array|bool $choices = true)
     {
         $this->choices = $choices;
 
         return $this;
     }
+
     public function remoteUrl(string $remoteUrl = '')
     {
         $this->remoteUrl = $remoteUrl;
 
         return $this;
     }
+
     public function remoteRoute(string $remoteRoute = '')
     {
         $this->remoteRoute = $remoteRoute;
