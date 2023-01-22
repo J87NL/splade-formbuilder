@@ -59,6 +59,20 @@ class Input extends Component
         return $this;
     }
 
+    public function unsigned()
+    {
+        $this->minValue(0);
+
+        return $this;
+    }
+
+    public function step($step = 1)
+    {
+        $this->attributes['step'] = $step;
+
+        return $this;
+    }
+
     public function date(array|bool $options = true)
     {
         $this->date = $options;
@@ -83,6 +97,41 @@ class Input extends Component
     public function hidden()
     {
         $this->type = 'hidden';
+
+        return $this;
+    }
+
+    public function email()
+    {
+        $this->type = 'email';
+
+        return $this;
+    }
+
+    public function password()
+    {
+        $this->type = 'password';
+
+        return $this;
+    }
+
+    public function integer()
+    {
+        $this->type = 'number';
+
+        return $this;
+    }
+
+    public function number()
+    {
+        $this->type = 'number';
+
+        return $this;
+    }
+
+    public function numeric()
+    {
+        $this->type = 'number';
 
         return $this;
     }

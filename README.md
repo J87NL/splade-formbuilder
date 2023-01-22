@@ -5,14 +5,17 @@ Todo:
 - [x] Multiple checkboxes-support (from an array): https://splade.dev/docs/form-checkbox
 - [x] Multiple radios-support (from an array): https://splade.dev/docs/form-radio
 - [ ] Files: https://splade.dev/docs/form-radio
-- [ ] Groups? https://splade.dev/docs/form-group
+- [x] Groups? https://splade.dev/docs/form-group
 - [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
 - [x] Validation (`->rules('required', 'string', 'max:255')`) & show-errors https://splade.dev/docs/form-overview
 - [ ] Validation for non SpladeForm-class requests
 - [x] Placeholders, prepends, appends
 - [x] Help-texts
 - [x] Disabled / readonly / required
-- [ ] ->email() / ->numeric() / ->integer() / ->decimals(2) / ->password() / ->url() ?
+- [x] ->email() / ->password()
+- [x] ->numeric() / ->integer() / ->step(2) / ->unsigned()
+- [ ] ->decimals(2) ?
+- [ ] ->url() ?
 - [ ] color picker?
 - [ ] Datepicker timezone?
 - [ ] Relations

@@ -68,7 +68,7 @@ class ExampleForm extends AbstractForm
             Input::make('inputNumber')
                 ->label('Input number field (min 1, max 100)')
                 ->type('number')
-//                ->numeric()
+                ->numeric()
                 ->minValue(1)
                 ->maxValue(100)
                 ->append('Test append'),
@@ -78,6 +78,18 @@ class ExampleForm extends AbstractForm
                 ->prepend('Test prepend')
                 ->append('Test append'),
 
+            Number::make('testNumberInput2')
+                ->label('Number field with ->unsigned()')
+                ->unsigned(),
+
+            Number::make('testNumberInput3')
+                ->label('Number field with ->step(0.01)')
+                ->step(0.01),
+
+            Number::make('testNumberInput4')
+                ->label('Number field with ->step(10)')
+                ->step(10),
+
             Input::make('inputEmail1')
                 ->label('Input email field')
                 ->type('email')
@@ -86,6 +98,10 @@ class ExampleForm extends AbstractForm
             Email::make('inputEmail2')
                 ->label('Email field'),
 
+            Input::make('inputEmail3')
+                ->label('Input ->email() field')
+                ->email(),
+
             Input::make('inputPassword1')
                 ->label('Input password field')
                 ->type('password'),
@@ -93,6 +109,10 @@ class ExampleForm extends AbstractForm
             Password::make('inputPassword2')
                 ->label('Password field')
                 ->rules('required', 'string', 'max:255'),
+
+            Input::make('inputPassword3')
+                ->label('Input ->password() field')
+                ->password(),
 
             Input::make('inputDate1')
                 ->label('Input date field')
