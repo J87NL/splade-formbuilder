@@ -6,7 +6,7 @@ use ProtoneMedia\Splade\Components\Form\Checkbox as SpladeCheckbox;
 
 class Checkbox extends Component
 {
-    public string $value;
+    private string $value;
 
     public function value(string $value = '')
     {

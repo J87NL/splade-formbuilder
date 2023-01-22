@@ -6,7 +6,7 @@ use ProtoneMedia\Splade\Components\Form\Radio as SpladeRadio;
 
 class Radio extends Component
 {
-    public string $value;
+    private string $value;
 
     public function value(string $value = '')
     {

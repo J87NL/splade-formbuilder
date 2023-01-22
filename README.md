@@ -9,7 +9,7 @@ Todo:
 - [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
 - [x] Validation (`->rules('required', 'string', 'max:255')`) & show-errors https://splade.dev/docs/form-overview
 - [ ] Validation for non SpladeForm-class requests
-- [ ] Placeholders, prepends, appends
+- [x] Placeholders, prepends, appends
 - [x] Help-texts
 - [ ] Disabled / readonly / required
 - [ ] ->email() / ->numeric() / ->integer() / ->decimals(2) / ->password() / ->url() ?

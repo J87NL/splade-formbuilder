@@ -9,12 +9,12 @@ abstract class Component
 {
     use InteractsWithFormElement;
 
-    public string $basename = '';
-    public string $name = '';
-    public string $label = '';
-    public array $attributes = [];
-    public string $help = '';
-    public array|string $rules = ['nullable'];
+    protected string $basename = '';
+    protected string $name = '';
+    protected string $label = '';
+    protected array $attributes = [];
+    protected string $help = '';
+    protected array|string $rules = ['nullable'];
 
     public function __construct($name)
     {
@@ -37,6 +37,13 @@ abstract class Component
     public function help(string $text)
     {
         $this->help = $text;
+
+        return $this;
+    }
+
+    public function placeholder(string $placeholder = '')
+    {
+        $this->attributes['placeholder'] = $placeholder;
 
         return $this;
     }

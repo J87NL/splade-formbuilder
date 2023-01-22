@@ -4,6 +4,6 @@ namespace App\Components\Form;
 
 class Password extends Input
 {
-    public string $type = 'password';
+    protected string $type = 'password';
 
 }

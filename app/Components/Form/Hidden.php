@@ -4,6 +4,6 @@ namespace App\Components\Form;
 
 class Hidden extends Input
 {
-    public string $type = 'hidden';
+    protected string $type = 'hidden';
 
 }

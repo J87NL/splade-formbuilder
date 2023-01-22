@@ -6,10 +6,12 @@ use ProtoneMedia\Splade\Components\Form\Input as SpladeInput;
 
 class Input extends Component
 {
-    public string $type = 'text';
-    public array|bool $date = false;
-    public array|bool $time = false;
-    public bool $range = false;
+    private array|bool $date = false;
+    private array|bool $time = false;
+    private bool $range = false;
+    private string $append = '';
+    private string $prepend = '';
+    protected string $type = 'text';
 
     public function type(string $type = 'text')
     {
@@ -85,16 +87,32 @@ class Input extends Component
         return $this;
     }
 
+    public function append(string $text)
+    {
+        $this->append = $text;
+
+        return $this;
+    }
+
+    public function prepend(string $text)
+    {
+        $this->prepend = $text;
+
+        return $this;
+    }
+
     public function render()
     {
         $object = new SpladeInput(
-            name: $this->name,
-            type: $this->type,
-            label: $this->label,
-            date: $this->date || $this->type === 'date',
-            time: $this->time || $this->type === 'time',
-            range: $this->range,
-            help: $this->help
+            name:    $this->name,
+            type:    $this->type,
+            label:   $this->label,
+            date:    $this->date || $this->type === 'date',
+            time:    $this->time || $this->type === 'time',
+            range:   $this->range,
+            prepend: $this->prepend,
+            append:  $this->append,
+            help:    $this->help
         );
 
         if ($this->date || $this->time) {

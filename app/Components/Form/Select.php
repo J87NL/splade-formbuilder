@@ -77,7 +77,7 @@ class Select extends Component
             name:        $this->name,
             options:     $this->options,
             label:       $this->label,
-            placeholder: $this->placeholder ?? '',
+            placeholder: $this->placeholder,
             multiple:    $this->multiple,
             choices:     $this->choices,
             help:        $this->help,

@@ -52,23 +52,28 @@ class ExampleForm extends AbstractForm
 
             Input::make('inputText2')
                 ->label('Input text field (minlength: 2, maxlength: 255)')
+                ->placeholder('Placeholder...')
                 ->minLength(2)
                 ->maxLength(255)
                 ->rules('required|max:255'),
 
             Input::make('inputText3')
                 ->label('Input text field with fixed length(6)')
-                ->length(6),
+                ->length(6)
+                ->prepend('Test prepend'),
 
             Input::make('inputNumber')
                 ->label('Input number field (min 1, max 100)')
                 ->type('number')
 //                ->numeric()
                 ->minValue(1)
-                ->maxValue(100),
+                ->maxValue(100)
+                ->append('Test append'),
 
             Number::make('testNumberInput')
-                ->label('Or as Number-alias field'),
+                ->label('Or as Number-alias field')
+                ->prepend('Test prepend')
+                ->append('Test append'),
 
             Input::make('inputEmail1')
                 ->label('Input email field')

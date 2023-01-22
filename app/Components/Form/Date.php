@@ -4,6 +4,6 @@ namespace App\Components\Form;
 
 class Date extends Input
 {
-    public string $type = 'date';
+    protected string $type = 'date';
 
 }

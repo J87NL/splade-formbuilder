@@ -6,7 +6,6 @@ use ProtoneMedia\Splade\Components\Form\Textarea as SpladeTextarea;
 
 class Textarea extends Component
 {
-
     public function autosize(bool $autosize = true)
     {
         $this->attributes['autosize'] = $autosize;
