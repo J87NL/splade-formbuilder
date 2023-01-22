@@ -6,7 +6,6 @@ use ProtoneMedia\Splade\Components\Form\Select as SpladeSelect;
 
 class Select extends Component
 {
-    private string $value;
     private array $options = [];
     private string $placeholder = '';
     private bool $multiple = false;

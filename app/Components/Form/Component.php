@@ -3,9 +3,13 @@
 namespace App\Components\Form;
 
 use Illuminate\Support\Arr;
+use ProtoneMedia\Splade\Components\Form\InteractsWithFormElement;
 
 abstract class Component
 {
+    use InteractsWithFormElement;
+
+    public string $basename = '';
     public string $name = '';
     public string $label = '';
     public array $attributes = [];
@@ -15,6 +19,7 @@ abstract class Component
     public function __construct($name)
     {
         $this->name = $name;
+        $this->basename = static::dottedName($name);
     }
 
     static function make(string $name)
