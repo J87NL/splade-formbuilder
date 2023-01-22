@@ -136,6 +136,13 @@ class Input extends Component
         return $this;
     }
 
+    public function color()
+    {
+        $this->type = 'color';
+
+        return $this;
+    }
+
     public function append(string $text)
     {
         $this->append = $text;

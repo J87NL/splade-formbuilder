@@ -16,7 +16,7 @@ Todo:
 - [x] ->numeric() / ->integer() / ->step(2) / ->unsigned()
 - [ ] ->decimals(2) ?
 - [ ] ->url() ?
-- [ ] color picker?
+- [x] color picker
 - [ ] Datepicker timezone?
 - [ ] Relations
 - [x] Refactor into SpladeForm-class (like SpladeTable)

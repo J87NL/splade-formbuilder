@@ -3,6 +3,7 @@
 namespace App\Forms;
 
 use App\Components\FormBuilder\Checkbox;
+use App\Components\FormBuilder\Color;
 use App\Components\FormBuilder\Date;
 use App\Components\FormBuilder\Email;
 use App\Components\FormBuilder\Hidden;
@@ -31,6 +32,9 @@ class ExampleForm extends AbstractForm
                 'disabledTextField' => 'This field is dissabled',
                 'readonlyTextField' => 'This field is readonly',
                 'disabledAndReadonlyTextField' => 'This field is disabled and readonly',
+                'colorInput1' => '#ffffff',
+                'colorInput2' => '#cccccc',
+                'colorInput3' => '#999999',
             ]);
     }
 
@@ -278,6 +282,17 @@ class ExampleForm extends AbstractForm
                 ->optionValue('id')
                 ->choices(false)
                 ->help('Test help 6'),
+
+            Input::make('colorInput1')
+                ->label('Color input 1: ->type(color)')
+                ->type('color'),
+
+            Input::make('colorInput2')
+                ->label('Color input 2: ->color()')
+                ->color(),
+
+            Color::make('colorInput3')
+                ->label('Color::make()'),
 
             Submit::make('submit')->label('Send'),
         ];
