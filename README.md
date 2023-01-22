@@ -11,7 +11,7 @@ Todo:
 - [ ] Validation for non SpladeForm-class requests
 - [x] Placeholders, prepends, appends
 - [x] Help-texts
-- [ ] Disabled / readonly / required
+- [x] Disabled / readonly / required
 - [ ] ->email() / ->numeric() / ->integer() / ->decimals(2) / ->password() / ->url() ?
 - [ ] color picker?
 - [ ] Datepicker timezone?

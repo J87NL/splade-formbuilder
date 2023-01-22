@@ -28,6 +28,9 @@ class ExampleForm extends AbstractForm
                 'hiddenInput1' => 'Test value hidden input 1',
                 'hiddenInput2' => 'Test value hidden input 2',
                 'inputText1' => 'Test value input text field 1',
+                'disabledTextField' => 'This field is dissabled',
+                'readonlyTextField' => 'This field is readonly',
+                'disabledAndReadonlyTextField' => 'This field is disabled and readonly',
             ]);
     }
 
@@ -129,6 +132,29 @@ class ExampleForm extends AbstractForm
 
             Text::make('textField')
                 ->label('Text-input (Input-alias)'),
+
+            Text::make('disabledTextField')
+                ->label('Disabled text field')
+                ->disabled(),
+
+            Text::make('readonlyTextField')
+                ->label('Readony text field')
+                ->readonly(),
+
+            Text::make('disabledAndReadonlyTextField')
+                ->label('Disabled and readony text field')
+                ->disabled()
+                ->readonly(),
+
+            Text::make('requiredTextInput1')
+                ->label('This field is required()')
+                ->required(),
+
+            Text::make('requiredTextInput2')
+                ->label('This field has both rules(required) and is required()')
+                ->placeholder('which is unnecessarily but should still work anyways')
+                ->rules('required', 'string')
+                ->required(),
 
             Textarea::make('testTextarea1')
                 ->label('Textarea'),

@@ -15,8 +15,8 @@ class MultiForm extends AbstractForm
             ->method('POST')
             ->class('space-y-4')
             ->data([
-                'testMultiCheckbox1' => '2',
-                'testMultiCheckbox2' => ['opt-2', 'opt-3'],
+                'testMultiCheckbox1' => [1],
+                'testMultiCheckbox2' => ['option-2', 'option-3'],
                 'testMultiRadio1' => 'light',
             ]);
     }
@@ -35,9 +35,9 @@ class MultiForm extends AbstractForm
             Checkboxes::make('testMultiCheckbox2')
                 ->label('MultiCheckbox 2 (inline)')
                 ->options([
-                    'opt-1' => 'Option 1',
-                    'opt-2' => 'Option 2',
-                    'opt-3' => 'Option 3',
+                    'option-1' => 'Option 1',
+                    'option-2' => 'Option 2',
+                    'option-3' => 'Option 3',
                 ])
                 ->inline(),
 

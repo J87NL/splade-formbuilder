@@ -10,6 +10,8 @@ class Submit extends Component
     {
         $object = new SpladeSubmit(label: $this->label, name: $this->name);
 
+        $object->withAttributes($this->attributes);
+
         return $object->render()->with($object->data())->with(['slot' => '']);
     }
 }

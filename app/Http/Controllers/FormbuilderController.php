@@ -58,6 +58,8 @@ class FormbuilderController extends Controller
 
     public function formClass()
     {
+//        dd(ExampleForm::rules());
+
         return view('formbuilder', [
             'example' => ExampleForm::build(), // Todo: refactor into `ExampleForm::class`
         ]);
@@ -72,8 +74,6 @@ class FormbuilderController extends Controller
 
     public function multi()
     {
-//        dd(ExampleForm2::rules());
-
         return view('formbuilder', [
             'example' => MultiForm::build(),
         ]);

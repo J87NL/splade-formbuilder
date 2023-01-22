@@ -24,6 +24,8 @@ class Radio extends Component
             help: $this->help
         );
 
+        $object->withAttributes($this->attributes);
+
         return $object->render()->with($object->data())->with(['slot' => '']);
     }
 }

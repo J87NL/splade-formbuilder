@@ -9,12 +9,12 @@ abstract class Component
 {
     use InteractsWithFormElement;
 
-    protected string $basename = '';
+    public string $basename = '';
     protected string $name = '';
     protected string $label = '';
     protected array $attributes = [];
     protected string $help = '';
-    protected array|string $rules = ['nullable'];
+    public array|string $rules = ['nullable'];
 
     public function __construct($name)
     {
@@ -44,6 +44,33 @@ abstract class Component
     public function placeholder(string $placeholder = '')
     {
         $this->attributes['placeholder'] = $placeholder;
+
+        return $this;
+    }
+
+    public function disabled(bool $disabled = true)
+    {
+        if ($disabled) {
+            $this->attributes['disabled'] = 'disabled';
+        }
+
+        return $this;
+    }
+
+    public function readonly(bool $readonly = true)
+    {
+        if ($readonly) {
+            $this->attributes['readonly'] = 'readonly';
+        }
+
+        return $this;
+    }
+
+    public function required(bool $required = true)
+    {
+        if ($required) {
+            $this->rules[] = 'required';
+        }
 
         return $this;
     }
