@@ -7,7 +7,8 @@ Todo:
 - [ ] Files: https://splade.dev/docs/form-radio
 - [ ] Groups? https://splade.dev/docs/form-group
 - [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
-- [ ] Validation (`->rules('required', 'string', 'max:255')`) / show-errors? https://splade.dev/docs/form-overview
+- [x] Validation (`->rules('required', 'string', 'max:255')`) & show-errors https://splade.dev/docs/form-overview
+- [ ] 
 - [ ] Placeholders, prepends, appends
 - [x] Help-texts
 - [ ] Disabled / readonly / required
@@ -16,9 +17,11 @@ Todo:
 - [ ] Datepicker timezone?
 - [ ] Relations
 - [x] Refactor into SpladeForm-class (like SpladeTable)
+- [ ] `ExampleForm::build()` =>  `ExampleForm::class`?
+- [ ] `php artisan make:form` command
 - [ ] Create pull request
 
 ___
 
-## To see this poc in action: https://splade-formbuilder.j87.nl/formbuilder
+## To see this poc in action: https://splade-formbuilder.j87.nl
 Source/config: https://github.com/J87NL/splade-formbuilder/blob/main/app/Http/Controllers/FormbuilderController.php

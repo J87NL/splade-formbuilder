@@ -21,7 +21,7 @@ class ExampleForm extends AbstractForm
     public function configure(SpladeForm $form)
     {
         $form
-            ->action(route('formbuilder.store'))
+            ->action(route('formbuilder.store-form-class'))
             ->method('POST')
             ->class('space-y-4')
             ->data([
@@ -47,12 +47,14 @@ class ExampleForm extends AbstractForm
 
             Input::make('inputText1')
                 ->label('Standard input text field')
-                ->help('Test help 1'),
+                ->help('Test help 1')
+                ->rules('required'),
 
             Input::make('inputText2')
                 ->label('Input text field (minlength: 2, maxlength: 255)')
                 ->minLength(2)
-                ->maxLength(255),
+                ->maxLength(255)
+                ->rules('required|max:255'),
 
             Input::make('inputText3')
                 ->label('Input text field with fixed length(6)')
@@ -70,7 +72,8 @@ class ExampleForm extends AbstractForm
 
             Input::make('inputEmail1')
                 ->label('Input email field')
-                ->type('email'),
+                ->type('email')
+                ->rules('nullable'),
 
             Email::make('inputEmail2')
                 ->label('Email field'),
@@ -80,11 +83,13 @@ class ExampleForm extends AbstractForm
                 ->type('password'),
 
             Password::make('inputPassword2')
-                ->label('Password field'),
+                ->label('Password field')
+                ->rules('required', 'string', 'max:255'),
 
             Input::make('inputDate1')
                 ->label('Input date field')
-                ->type('date'),
+                ->type('date')
+                ->rules('required', 'date'),
 
             Input::make('inputDate2')
                 ->label('Input date time field')
@@ -124,9 +129,10 @@ class ExampleForm extends AbstractForm
                 ->label('Textarea'),
 
             Textarea::make('testTextarea2')
-                ->label('Textarea (with autosize)')
+                ->label('Textarea (with autosize) and an array of rules')
                 ->autosize()
-                ->help('Test help 3'),
+                ->help('Test help 3')
+                ->rules(['required', 'string', 'max:10']),
 
             Checkbox::make('testCheckbox[]')->label('Checkbox 1')->value('checkbox-1'),
             Checkbox::make('testCheckbox[]')->label('Checkbox 2')->value('checkbox-2')->help('Test help 4'),

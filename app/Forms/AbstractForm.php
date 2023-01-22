@@ -2,6 +2,8 @@
 
 namespace App\Forms;
 
+use Illuminate\Support\Arr;
+
 abstract class AbstractForm
 {
     private ?SpladeForm $form = null;
@@ -36,5 +38,12 @@ abstract class AbstractForm
     public function configure(SpladeForm $form)
     {
         //
+    }
+
+    public static function rules()
+    {
+        $form = self::build();
+
+        return Arr::pluck($form->fields, 'rules', 'name');
     }
 }

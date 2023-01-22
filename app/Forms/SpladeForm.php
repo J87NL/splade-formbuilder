@@ -20,7 +20,7 @@ class SpladeForm
         $this->fields = $fields;
     }
 
-    public static function build(array $fields): static
+    public static function build(array $fields = []): static
     {
         return new static($fields);
     }

@@ -14,10 +14,8 @@
             Easily create Splade-forms using PHP like this (click the menu to see in action):<br />
             <br />
             <pre>
-            &lt;?php
-
             return view('formbuilder', [
-                'example' => ExampleForm::build()
+                'example' => SpladeForm::build()
                     ->action(route('formbuilder.store'))
                     ->method('POST')
                     ->class('space-y-4')
