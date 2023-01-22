@@ -2,9 +2,9 @@
 
 namespace App\Forms;
 
-use App\Components\Form\Checkboxes;
-use App\Components\Form\Radios;
-use App\Components\Form\Submit;
+use App\Components\FormBuilder\Checkboxes;
+use App\Components\FormBuilder\Radios;
+use App\Components\FormBuilder\Submit;
 
 class MultiForm extends AbstractForm
 {

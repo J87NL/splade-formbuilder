@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Components\Form\Input;
-use App\Components\Form\Password;
-use App\Components\Form\Submit;
-use App\Components\Form\Textarea;
+use App\Components\FormBuilder\Input;
+use App\Components\FormBuilder\Password;
+use App\Components\FormBuilder\Submit;
+use App\Components\FormBuilder\Textarea;
 use App\Forms\ExampleForm;
 use App\Forms\MultiForm;
 use App\Forms\SpladeForm;

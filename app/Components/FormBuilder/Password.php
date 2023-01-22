@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Components\Form;
+namespace App\Components\FormBuilder;
 
 class Password extends Input
 {

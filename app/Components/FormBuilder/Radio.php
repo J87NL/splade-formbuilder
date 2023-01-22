@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Components\Form;
+namespace App\Components\FormBuilder;
 
 use ProtoneMedia\Splade\Components\Form\Radio as SpladeRadio;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Components\Form;
+namespace App\Components\FormBuilder;
 
-use ProtoneMedia\Splade\Components\Form\Radios as SpladeRadios;
+use ProtoneMedia\Splade\Components\Form\Checkboxes as SpladeCheckboxes;
 
-class Radios extends Component
+class Checkboxes extends Component
 {
     private array $options = [];
     private bool $inline = false;
@@ -25,7 +25,7 @@ class Radios extends Component
 
     public function render()
     {
-        $object = new SpladeRadios(
+        $object = new SpladeCheckboxes(
             name:    $this->name,
             options: $this->options,
             label:   $this->label,

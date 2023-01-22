@@ -2,19 +2,19 @@
 
 namespace App\Forms;
 
-use App\Components\Form\Checkbox;
-use App\Components\Form\Date;
-use App\Components\Form\Email;
-use App\Components\Form\Hidden;
-use App\Components\Form\Input;
-use App\Components\Form\Number;
-use App\Components\Form\Password;
-use App\Components\Form\Radio;
-use App\Components\Form\Select;
-use App\Components\Form\Submit;
-use App\Components\Form\Text;
-use App\Components\Form\Textarea;
-use App\Components\Form\Time;
+use App\Components\FormBuilder\Checkbox;
+use App\Components\FormBuilder\Date;
+use App\Components\FormBuilder\Email;
+use App\Components\FormBuilder\Hidden;
+use App\Components\FormBuilder\Input;
+use App\Components\FormBuilder\Number;
+use App\Components\FormBuilder\Password;
+use App\Components\FormBuilder\Radio;
+use App\Components\FormBuilder\Select;
+use App\Components\FormBuilder\Submit;
+use App\Components\FormBuilder\Text;
+use App\Components\FormBuilder\Textarea;
+use App\Components\FormBuilder\Time;
 
 class ExampleForm extends AbstractForm
 {

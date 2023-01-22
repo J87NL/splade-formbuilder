@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Components\Form;
+namespace App\Components\FormBuilder;
 
 use Illuminate\Support\Arr;
 use ProtoneMedia\Splade\Components\Form\InteractsWithFormElement;
