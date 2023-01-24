@@ -7,8 +7,10 @@ use App\Components\FormBuilder\Password;
 use App\Components\FormBuilder\Submit;
 use App\Components\FormBuilder\Textarea;
 use App\Forms\ExampleForm;
+use App\Forms\FilesForm;
 use App\Forms\MultiForm;
 use App\Forms\SpladeForm;
+use App\Http\Requests\FilesFormRequest;
 use App\Http\Requests\MultiFieldsFormRequest;
 use App\Http\Requests\ExampleFormRequest;
 use Illuminate\Http\Request;
@@ -80,6 +82,20 @@ class FormbuilderController extends Controller
     }
 
     public function storeMulti(MultiFieldsFormRequest $request)
+    {
+        $validated = $request->validated();
+
+        dd($validated);
+    }
+
+    public function files()
+    {
+        return view('formbuilder', [
+            'example' => FilesForm::build(),
+        ]);
+    }
+
+    public function storeFiles(FilesFormRequest $request)
     {
         $validated = $request->validated();
 

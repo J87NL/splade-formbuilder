@@ -28,6 +28,10 @@
                         <x-nav-link href="{{ route('formbuilder.multi') }}" :active="request()->routeIs('formbuilder.multi')">
                             {{ __('Multiple checkboxes / radios') }}
                         </x-nav-link>
+
+                        <x-nav-link href="{{ route('formbuilder.files') }}" :active="request()->routeIs('formbuilder.files')">
+                            {{ __('Files') }}
+                        </x-nav-link>
                     </div>
                 </div>
 
@@ -60,6 +64,10 @@
 
                 <x-responsive-nav-link href="{{ route('formbuilder.multi') }}" :active="request()->routeIs('formbuilder.multi')">
                     {{ __('Multiple checkboxes / radios') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link href="{{ route('formbuilder.files') }}" :active="request()->routeIs('formbuilder.files')">
+                    {{ __('Files') }}
                 </x-responsive-nav-link>
             </div>
         </div>
