@@ -3,8 +3,8 @@
 namespace App\Forms;
 
 use App\Components\FormBuilder\File;
-use App\Components\FormBuilder\Input;
 use App\Components\FormBuilder\Submit;
+use Illuminate\Validation\Rules\File as FileRule;
 
 class FilesForm extends AbstractForm
 {
@@ -107,6 +107,19 @@ class FilesForm extends AbstractForm
                 ->filepond()
                 ->minResolution(150)
                 ->maxResolution(9999999),
+
+            File::make('testFile16')
+                ->label('File field with ->rules()')
+                ->rules(['required']),
+
+            File::make('testFile17')
+                ->label('File field with Laravel Rule validation')
+                ->rules([
+                    'required',
+                    FileRule::image()
+                        ->min(1024)
+                        ->max(12 * 1024)
+                ]),
 
             Submit::make('submit')->label('Send'),
         ];

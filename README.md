@@ -5,7 +5,7 @@ Todo:
 - [x] Multiple checkboxes-support (from an array): https://splade.dev/docs/form-checkbox
 - [x] Multiple radios-support (from an array): https://splade.dev/docs/form-radio
 - [x] Files: https://splade.dev/docs/form-radio
-  - [ ] File-validation
+  - [x] File-validation
 - [x] Groups? https://splade.dev/docs/form-group
 - [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
 - [x] Validation (`->rules('required', 'string', 'max:255')`) & show-errors https://splade.dev/docs/form-overview

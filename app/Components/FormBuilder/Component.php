@@ -86,11 +86,10 @@ abstract class Component
     {
         $rules = Arr::flatten($rules);
 
-        $collection = collect($rules)->filter(function($item) {
-            return is_string($item);
-        });
-
-        $this->rules = $collection->map(function($item){
+        $this->rules = collect($rules)->map(function($item) {
+            if (!is_string($item)) {
+                return $item;
+            }
             return explode('|', $item);
         })->flatten()->toArray();
 

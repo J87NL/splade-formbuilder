@@ -111,8 +111,8 @@ class ExampleForm extends AbstractForm
                 ->type('password'),
 
             Password::make('inputPassword2')
-                ->label('Password field')
-                ->rules('required', 'string', 'max:255'),
+                ->label('Password field with validation: ->min(8) and ->symbols()')
+                ->rules('required', 'string', 'max:255', \Illuminate\Validation\Rules\Password::min(8)->symbols()),
 
             Input::make('inputPassword3')
                 ->label('Input ->password() field')

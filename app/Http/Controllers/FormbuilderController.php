@@ -90,6 +90,8 @@ class FormbuilderController extends Controller
 
     public function files()
     {
+//        dd(FilesForm::rules());
+
         return view('formbuilder', [
             'example' => FilesForm::build(),
         ]);

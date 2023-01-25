@@ -70,9 +70,17 @@ class File extends Component
         return $this;
     }
 
-    public function accept(array|string $accept = '')
+    /**
+     * Set the accepted mimetype(s), automatically adds validation rules
+     *
+     * @param array|string $mimetypes
+     * @return $this
+     */
+    public function accept(array|string $mimetypes = '')
     {
-        $this->accept = $accept;
+        $this->accept = $mimetypes;
+
+        $this->rules[] = 'mimetypes:' . (is_array($mimetypes) ? implode(',', $mimetypes) : $mimetypes);
 
         return $this;
     }
