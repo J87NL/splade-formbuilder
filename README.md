@@ -7,23 +7,24 @@ Todo:
 - [x] Files: https://splade.dev/docs/form-radio
   - [x] File-validation
 - [x] Groups? https://splade.dev/docs/form-group
-- [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
 - [x] Validation (`->rules('required', 'string', 'max:255')`) & show-errors https://splade.dev/docs/form-overview
-- [ ] Validation for non SpladeForm-class requests
 - [x] Placeholders, prepends, appends
 - [x] Help-texts
 - [x] Disabled / readonly / required
 - [x] ->email() / ->password()
 - [x] ->numeric() / ->integer() / ->step(2) / ->unsigned()
+- [x] Refactor into SpladeForm-class (like SpladeTable)
+- [x] color picker
+- [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
+- [ ] `ExampleForm::build()` => `ExampleForm::class`?
+- [ ] `php artisan make:form` command
+- [ ] Validation for non SpladeForm-class requests
+- [ ] Create pull request
+
+Maybe later:
 - [ ] ->decimals(2) ?
 - [ ] ->url() ?
-- [x] color picker
 - [ ] Datepicker timezone?
-- [ ] Relations
-- [x] Refactor into SpladeForm-class (like SpladeTable)
-- [ ] `ExampleForm::build()` =>  `ExampleForm::class`?
-- [ ] `php artisan make:form` command
-- [ ] Create pull request
 
 ___
 
