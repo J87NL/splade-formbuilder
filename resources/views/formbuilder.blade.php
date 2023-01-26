@@ -7,7 +7,7 @@
 
         <x-splade-formbuilder :for="$example" />
 
-        @if($example2)
+        @if(isset($example2))
             <hr class="my-8" />
 
             <x-splade-formbuilder :for="$example2" />
