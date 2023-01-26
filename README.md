@@ -17,7 +17,7 @@ Todo:
 - [x] color picker
 - [x] Model-binding: https://splade.dev/docs/form-model-binding-attributes
 - [ ] `ExampleForm::build()` => `ExampleForm::class`?
-- [ ] `php artisan make:form` command
+- [x] `php artisan make:form` command
 - [ ] Validation for non SpladeForm-class requests
 - [ ] Tests
 - [ ] Create pull request
