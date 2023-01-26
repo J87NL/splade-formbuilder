@@ -20,6 +20,7 @@ Todo:
 - [x] `php artisan make:form` command
 - [ ] Validation for non SpladeForm-class requests
 - [ ] Tests
+- [ ] Documentatio
 - [ ] Create pull request
 
 Maybe later:

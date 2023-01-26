@@ -37,18 +37,6 @@ class FormMakeCommand extends GeneratorCommand
     protected $description = 'Create a new Splade form class';
 
     /**
-     * Build the class with the given name.
-     *
-     * @param  string  $name
-     * @return string
-     */
-//    protected function buildClass($name)
-//    {
-//        $stub = parent::buildClass($name);
-//
-//    }
-
-    /**
      * Get the stub file for the generator.
      *
      * @return string
