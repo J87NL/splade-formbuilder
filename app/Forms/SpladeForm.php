@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Forms;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class SpladeForm
@@ -46,8 +47,12 @@ class SpladeForm
         return $this;
     }
 
-    public function data(array $data)
+    public function data(Model|array $data)
     {
+        if ($data instanceof Model) {
+            $data = $data->toArray();
+        }
+
         $this->data = $data;
 
         return $this;

@@ -15,10 +15,11 @@ Todo:
 - [x] ->numeric() / ->integer() / ->step(2) / ->unsigned()
 - [x] Refactor into SpladeForm-class (like SpladeTable)
 - [x] color picker
-- [ ] Model-binding (instead of or besides `->data(...)`): https://splade.dev/docs/form-model-binding-attributes
+- [x] Model-binding: https://splade.dev/docs/form-model-binding-attributes
 - [ ] `ExampleForm::build()` => `ExampleForm::class`?
 - [ ] `php artisan make:form` command
 - [ ] Validation for non SpladeForm-class requests
+- [ ] Tests
 - [ ] Create pull request
 
 Maybe later:
