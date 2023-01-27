@@ -18,6 +18,7 @@ Todo:
 - [x] Model-binding: https://splade.dev/docs/form-model-binding-attributes
 - [ ] `ExampleForm::build()` => `ExampleForm::class`?
 - [x] `php artisan make:form` command
+  - [x] make:form-request and make:form -r
 - [ ] Validation for non SpladeForm-class requests
 - [ ] Tests
 - [ ] Documentation

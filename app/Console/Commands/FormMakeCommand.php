@@ -36,6 +36,38 @@ class FormMakeCommand extends GeneratorCommand
      */
     protected $description = 'Create a new Splade form class';
 
+
+    /**
+     * Execute the console command.
+     *
+     * @return bool|void
+     */
+    public function handle()
+    {
+        if (parent::handle() === false && ! $this->option('force')) {
+            return false;
+        }
+
+        if ($this->option('request')) {
+            $this->createRequest();
+        }
+    }
+
+    /**
+     * Create a model factory for the model.
+     *
+     * @return void
+     */
+    protected function createRequest()
+    {
+        $form = Str::studly($this->argument('name'));
+
+        $this->call('make:form-request', [
+            'name' => "{$form}Request",
+            '--form' => $this->qualifyClass($this->getNameInput()),
+        ]);
+    }
+
     /**
      * Get the stub file for the generator.
      *
@@ -79,6 +111,7 @@ class FormMakeCommand extends GeneratorCommand
     {
         return [
             ['force', 'f', InputOption::VALUE_NONE, 'Create the class even if the class already exists'],
+            ['request', 'r', InputOption::VALUE_NONE, 'Create a FormRequest for the form'],
         ];
     }
 }
